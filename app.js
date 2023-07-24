@@ -15,6 +15,7 @@ request.addEventListener("readystatechange", () => {
       UpdateUI(data.filter((todo) => todo.completed === true));
       notRadio.checked === false;
       allRadio.checked = false;
+    
     });
     notRadio.addEventListener("click", () => {
       UpdateUI(data.filter((todo) => todo.completed === false));
@@ -51,17 +52,4 @@ function UpdateUI(data) {
   });
 }
 
-// function filterData(getData) {
-//   if (getData === "all") {
-//     return data;
-//   } else if (getData === "not") {
-//     return data.filter((item) => item.completed === false);
-//   } else if (getData === "done") {
-//     return data.filter((item) => item.completed === true);
-//   }
-// }
 
-// const selectedRadio = 'done';
-
-// const filteredData = filterData(selectedRadio);
-// console.log(filteredData);
